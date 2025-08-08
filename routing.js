@@ -1,9 +1,16 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash'); // lodash is not used in this snippet, but can be useful for utility functions
 const server = http.createServer((req, res) => {
 
 res.setHeader('content-type', 'text/html');
-console.log(req.url, req.method);
+// console.log(req.url, req.method);
+const num = _.random(0, 100);
+console.log(num);// This will log a random number between 0 and 100
+const greet = _.once(() => {
+    console.log('hello');   
+});
+greet(); // This will log 'hello' only once, no matter how many times greet
 
 
 let path = './views/';
