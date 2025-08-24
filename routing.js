@@ -13,7 +13,7 @@ const greet = _.once(() => {
 greet(); // This will log 'hello' only once, no matter how many times greet
 
 
-let path = './views/';
+let path = './assets/';
 switch(req.url){
     case '/':
         path += 'index.html';
